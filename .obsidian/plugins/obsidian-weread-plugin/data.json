@@ -1,0 +1,285 @@
+{
+  "loginMethod": "scan",
+  "cookies": [
+    {
+      "name": "wr_fp",
+      "value": "2403319481"
+    },
+    {
+      "name": "wr_skey",
+      "value": "Xhbnj82k"
+    },
+    {
+      "name": "wr_vid",
+      "value": "213889525"
+    },
+    {
+      "name": "wr_ql",
+      "value": "0"
+    },
+    {
+      "name": "wr_rt",
+      "value": "web@xTBuQfC~wn0~__OY1Xc_AL"
+    },
+    {
+      "name": "wr_gid",
+      "value": "282441183"
+    }
+  ],
+  "noteLocation": "Raw/05-成长/04-读书笔记",
+  "dailyNotesLocation": "/",
+  "insertAfter": "<!-- start of weread -->",
+  "insertBefore": "<!-- end of weread -->",
+  "dailyNotesFormat": "YYYY-MM-DD",
+  "lastCookieTime": 1784021085807,
+  "isCookieValid": true,
+  "user": "",
+  "userVid": "213889525",
+  "userAvatar": "",
+  "userSignature": "",
+  "template": "",
+  "noteCountLimit": -1,
+  "subFolderType": "-1",
+  "fileNameType": "BOOK_NAME",
+  "removeParens": false,
+  "removeParensWhitelist": "",
+  "filterInlineImages": false,
+  "dailyNotesToggle": false,
+  "notesBlacklist": "",
+  "notesWhitelist": "",
+  "syncMode": "blacklist",
+  "showEmptyChapterTitleToggle": false,
+  "convertTags": false,
+  "saveArticleToggle": true,
+  "saveReadingInfoToggle": true,
+  "syncPopularHighlightsToggle": false,
+  "readingOpenMode": "TAB",
+  "bookOpenMode": "web",
+  "trimBlocks": false,
+  "cookieCloudInfo": {
+    "serverUrl": "",
+    "uuid": "",
+    "password": ""
+  },
+  "cookieAutoRefreshToggle": false,
+  "cookieRefreshInterval": 12,
+  "scheduledSyncToggle": false,
+  "scheduledSyncInterval": 5,
+  "lastSyncTime": 1784021298693,
+  "lastSyncBookCount": 32,
+  "lastSyncBookTitles": [],
+  "syncLogs": [
+    {
+      "id": "sync-1784021275102",
+      "timestamp": 1784021275102,
+      "totalBooks": 32,
+      "syncedBooks": 32,
+      "skippedBooks": 0,
+      "duration": 23.59,
+      "notes": [
+        {
+          "bookId": "CB_G3A1jQ1m77e172r71B0adFY1",
+          "title": "每个人都有自己的职场优势",
+          "filePath": "Raw/05-成长/04-读书笔记/每个人都有自己的职场优势.md"
+        },
+        {
+          "bookId": "3300100889",
+          "title": "如何找到想做的事",
+          "filePath": "Raw/05-成长/04-读书笔记/如何找到想做的事.md"
+        },
+        {
+          "bookId": "44026191",
+          "title": "纳瓦尔宝典",
+          "filePath": "Raw/05-成长/04-读书笔记/纳瓦尔宝典.md"
+        },
+        {
+          "bookId": "693564",
+          "title": "人生的智慧",
+          "filePath": "Raw/05-成长/04-读书笔记/人生的智慧.md"
+        },
+        {
+          "bookId": "23659632",
+          "title": "基督山伯爵（全3册|读客三个圈经典文库）",
+          "filePath": "Raw/05-成长/04-读书笔记/基督山伯爵（全3册读客三个圈经典文库）.md"
+        },
+        {
+          "bookId": "858626",
+          "title": "我们仨",
+          "filePath": "Raw/05-成长/04-读书笔记/我们仨.md"
+        },
+        {
+          "bookId": "857863",
+          "title": "献给阿尔吉侬的花束",
+          "filePath": "Raw/05-成长/04-读书笔记/献给阿尔吉侬的花束.md"
+        },
+        {
+          "bookId": "24129813",
+          "title": "显微镜下的大明",
+          "filePath": "Raw/05-成长/04-读书笔记/显微镜下的大明.md"
+        },
+        {
+          "bookId": "3300003224",
+          "title": "长安的荔枝（同名影视原著）",
+          "filePath": "Raw/05-成长/04-读书笔记/长安的荔枝（同名影视原著）.md"
+        },
+        {
+          "bookId": "44000669",
+          "title": "梁永安：阅读、游历和爱情",
+          "filePath": "Raw/05-成长/04-读书笔记/梁永安：阅读、游历和爱情.md"
+        },
+        {
+          "bookId": "24020249",
+          "title": "一行禅师大合集：一套写给普通人的佛学入门书",
+          "filePath": "Raw/05-成长/04-读书笔记/一行禅师大合集：一套写给普通人的佛学入门书.md"
+        },
+        {
+          "bookId": "915288",
+          "title": "亲密关系",
+          "filePath": "Raw/05-成长/04-读书笔记/亲密关系.md"
+        },
+        {
+          "bookId": "32486647",
+          "title": "幸福的勇气：“自我启发之父”阿德勒的哲学课2",
+          "filePath": "Raw/05-成长/04-读书笔记/幸福的勇气：“自我启发之父”阿德勒的哲学课2.md"
+        },
+        {
+          "bookId": "3300075597",
+          "title": "爱的多重奏",
+          "filePath": "Raw/05-成长/04-读书笔记/爱的多重奏.md"
+        },
+        {
+          "bookId": "3300094338",
+          "title": "你好，生命  写给年轻人的生命教育课",
+          "filePath": "Raw/05-成长/04-读书笔记/你好，生命  写给年轻人的生命教育课.md"
+        },
+        {
+          "bookId": "36721739",
+          "title": "心理课怎么玩",
+          "filePath": "Raw/05-成长/04-读书笔记/心理课怎么玩.md"
+        },
+        {
+          "bookId": "25615385",
+          "title": "被讨厌的勇气：“自我启发之父”阿德勒的哲学课",
+          "filePath": "Raw/05-成长/04-读书笔记/被讨厌的勇气：“自我启发之父”阿德勒的哲学课.md"
+        },
+        {
+          "bookId": "40726710",
+          "title": "也许你该找个人聊聊",
+          "filePath": "Raw/05-成长/04-读书笔记/也许你该找个人聊聊.md"
+        },
+        {
+          "bookId": "855327",
+          "title": "悉达多（果麦经典）",
+          "filePath": "Raw/05-成长/04-读书笔记/悉达多（果麦经典）.md"
+        },
+        {
+          "bookId": "853022",
+          "title": "刀锋",
+          "filePath": "Raw/05-成长/04-读书笔记/刀锋.md"
+        },
+        {
+          "bookId": "25164497",
+          "title": "人生",
+          "filePath": "Raw/05-成长/04-读书笔记/人生.md"
+        },
+        {
+          "bookId": "33628204",
+          "title": "认知觉醒：开启自我改变的原动力",
+          "filePath": "Raw/05-成长/04-读书笔记/认知觉醒：开启自我改变的原动力.md"
+        },
+        {
+          "bookId": "40643407",
+          "title": "与内在小孩和解",
+          "filePath": "Raw/05-成长/04-读书笔记/与内在小孩和解.md"
+        },
+        {
+          "bookId": "921826",
+          "title": "心流：最优体验心理学",
+          "filePath": "Raw/05-成长/04-读书笔记/心流：最优体验心理学.md"
+        },
+        {
+          "bookId": "33091654",
+          "title": "精力管理",
+          "filePath": "Raw/05-成长/04-读书笔记/精力管理.md"
+        },
+        {
+          "bookId": "33800868",
+          "title": "少有人走的路4：在焦虑的年代获得精神的成长",
+          "filePath": "Raw/05-成长/04-读书笔记/少有人走的路4：在焦虑的年代获得精神的成长.md"
+        },
+        {
+          "bookId": "837932",
+          "title": "穷查理宝典：查理·芒格智慧箴言录（全新增订本）",
+          "filePath": "Raw/05-成长/04-读书笔记/穷查理宝典：查理·芒格智慧箴言录（全新增订本）.md"
+        },
+        {
+          "bookId": "29963750",
+          "title": "自卑与超越（完整全译本）",
+          "filePath": "Raw/05-成长/04-读书笔记/自卑与超越（完整全译本）.md"
+        },
+        {
+          "bookId": "33810600",
+          "title": "高效能人士的七个习惯（30周年纪念版）（全新增订版）",
+          "filePath": "Raw/05-成长/04-读书笔记/高效能人士的七个习惯（30周年纪念版）（全新增订版）.md"
+        },
+        {
+          "bookId": "33800862",
+          "title": "少有人走的路：心智成熟的旅程",
+          "filePath": "Raw/05-成长/04-读书笔记/少有人走的路：心智成熟的旅程.md"
+        },
+        {
+          "bookId": "857527",
+          "title": "活出生命的意义",
+          "filePath": "Raw/05-成长/04-读书笔记/活出生命的意义.md"
+        },
+        {
+          "bookId": "32963606",
+          "title": "心：稻盛和夫的一生嘱托（独家首发）",
+          "filePath": "Raw/05-成长/04-读书笔记/心：稻盛和夫的一生嘱托（独家首发）.md"
+        }
+      ],
+      "success": true
+    }
+  ],
+  "bookshelfSortMode": "recent",
+  "bookshelfGroupByYear": true,
+  "bookshelfDefaultSyncStatusFilter": "all",
+  "themes": [
+    {
+      "id": "builtin_merged",
+      "name": "合并式模板",
+      "description": "划线和想法 inline 展示，适合快速回顾",
+      "template": "---\nisbn: {{ metaData.isbn }}\nlastReadDate: {{ metaData.lastReadDate }}\n---\n# 元数据\n> [!abstract] {{ metaData.title }}\n> - ![ {{ metaData.title }}|200]({{ metaData.cover }})\n> - 书名： {{ metaData.title }}\n> - 作者： {{ metaData.author }}\n> - 简介： {% set intro = metaData.intro | replace(\"\\n\",\"\") | replace(\"\\r\",\"\") %}{{ intro }}\n> - 出版时间： {{ metaData.publishTime }}\n> - ISBN： {{ metaData.isbn }}\n> - 分类： {{ metaData.category }}\n> - 出版社： {{ metaData.publisher }}\n> - PC地址：{{ metaData.pcUrl }}\n\n# 高亮划线\n{% if syncPopularHighlightsToggle %}\n{% for chapter in chapterHighlights %}\n{% if chapter.level == 1 %}\n## {{ chapter.chapterTitle }}\n{% elif chapter.level == 2 %}\n### {{ chapter.chapterTitle }}\n{% elif chapter.level == 3 %}\n#### {{ chapter.chapterTitle }}\n{% endif %}\n{% for highlight in chapter.highlights %}\n{% set rangeParts = highlight.range | split(\"-\") %}\n{% set deeplink = \"weread://bestbookmark?bookId=\" + metaData.bookId + \"&chapterUid=\" + highlight.chapterUid + \"&rangeStart=\" + rangeParts[0] + \"&rangeEnd=\" + rangeParts[1] %}\n{% if highlight.isPopular and highlight.isUserHighlight %}\n{# 用户自己的划线 + 热门：📌🔥 + 共读人数 #}\n{% if highlight.reviewContent %}\n> 📌🔥 [{{ highlight.markText | trim }}](<{{ deeplink }}>)\n> 🔥 {{ highlight.popularCount }} 人共读\n> 💭 {{ highlight.reviewContent }} \n> ⏱ {{ highlight.createTime }} ^{{ highlight.bookmarkId }}\n{% else %}\n> 📌🔥 [{{ highlight.markText | trim }}](<{{ deeplink }}>)\n> 🔥 {{ highlight.popularCount }} 人共读\n> ⏱ {{ highlight.createTime }} ^{{ highlight.bookmarkId }}\n\n{% endif %}\n{% elif highlight.isPopular %}\n{# 只有热门划线（非用户）：🔥 + 共读人数 #}\n> 🔥 [{{ highlight.markText | trim }}](<{{ deeplink }}>)\n> 📊 {{ highlight.popularCount }} 人共读 ^{{ highlight.bookmarkId }}\n\n{% else %}\n{# 普通用户划线（非热门）：📌 #}\n{% if highlight.reviewContent %}\n> 📌 [{{ highlight.markText | trim }}](<{{ deeplink }}>)\n> 💭 {{ highlight.reviewContent }} \n> ⏱ {{ highlight.createTime }} ^{{ highlight.bookmarkId }}\n{% else %}\n> 📌 [{{ highlight.markText | trim }}](<{{ deeplink }}>)\n> ⏱ {{ highlight.createTime }} ^{{ highlight.bookmarkId }}\n\n{% endif %}\n{% endif %}\n{% endfor %}\n{% endfor %}\n{% else %}\n{% for chapter in chapterHighlights %}\n{% if chapter.level == 1 %}\n## {{ chapter.chapterTitle }}\n{% elif chapter.level == 2 %}\n### {{ chapter.chapterTitle }}\n{% elif chapter.level == 3 %}\n#### {{ chapter.chapterTitle }}\n{% endif %}\n{% for highlight in chapter.highlights %}\n{% set rangeParts = highlight.range | split(\"-\") %}\n{% set deeplink = \"weread://bestbookmark?bookId=\" + metaData.bookId + \"&chapterUid=\" + highlight.chapterUid + \"&rangeStart=\" + rangeParts[0] + \"&rangeEnd=\" + rangeParts[1] %}\n{# 普通用户划线（不显示热门）：📌 #}\n{% if highlight.reviewContent %}\n> 📌 [{{ highlight.markText | trim }}](<{{ deeplink }}>)\n 💭 {{ highlight.reviewContent }} \n ⏱ {{ highlight.createTime }} ^{{ highlight.bookmarkId }}\n{% else %}\n> 📌 [{{ highlight.markText | trim }}](<{{ deeplink }}>)\n> ⏱ {{ highlight.createTime }} ^{{ highlight.bookmarkId }}\n\n{% endif %}\n{% endfor %}\n{% endfor %}\n{% endif %}\n\n# 读书笔记\n{% for chapter in bookReview.chapterReviews %}\n{% if chapter.reviews or chapter.chapterReview %}\n## {{ chapter.chapterTitle }}\n{% if chapter.chapterReviews %}\n{% for chapterReview in chapter.chapterReviews %}\n### 章节评论 No.{{ loop.index }}\n- {{ chapterReview.content }} ^{{ chapterReview.reviewId }}\n    - ⏱ {{ chapterReview.createTime }}\n{% endfor %}\n{% endif %}\n{% if chapter.reviews %}\n{% for review in chapter.reviews %}\n### 划线评论\n> 📌 {{ review.abstract | trim }} ^{{ review.reviewId }}\n    💭 {{ review.content }}\n    ⏱ {{ review.createTime }}\n{% endfor %}\n{% endif %}\n{% endif %}\n{% endfor %}\n\n# 本书评论\n{% if bookReview.bookReviews %}\n{% for bookReview in bookReview.bookReviews %}\n## 书评 No.{{ loop.index }}\n{{ bookReview.mdContent }} ^{{ bookReview.reviewId }}\n⏱ {{ bookReview.createTime }}\n{% endfor %}\n{% endif %}\n",
+      "trimBlocks": true,
+      "isBuiltIn": true,
+      "isReadOnly": true,
+      "source": "builtin"
+    },
+    {
+      "id": "builtin_separated",
+      "name": "分离式模板",
+      "description": "先展示纯划线，笔记统一在底部，适合整理归纳",
+      "template": "---\nisbn: {{ metaData.isbn }}\nlastReadDate: {{ metaData.lastReadDate }}\n---\n# 元数据\n> [!abstract] {{ metaData.title }}\n> - ![ {{ metaData.title }}|200]({{ metaData.cover }})\n> - 书名： {{ metaData.title }}\n> - 作者： {{ metaData.author }}\n> - 简介： {% set intro = metaData.intro | replace(\"\\n\",\"\") | replace(\"\\r\",\"\") %}{{ intro }}\n> - 出版时间： {{ metaData.publishTime }}\n> - ISBN： {{ metaData.isbn }}\n> - 分类： {{ metaData.category }}\n> - 出版社： {{ metaData.publisher }}\n> - PC地址：{{ metaData.pcUrl }}\n\n# 高亮划线\n{% for chapter in chapterHighlights %}\n{% if chapter.level == 1 %}\n## {{ chapter.chapterTitle }}\n{% elif chapter.level == 2 %}\n### {{ chapter.chapterTitle }}\n{% elif chapter.level == 3 %}\n#### {{ chapter.chapterTitle }}\n{% endif %}\n{% for highlight in chapter.highlights %}\n{% set rangeParts = highlight.range | split(\"-\") %}\n{% set deeplink = \"weread://bestbookmark?bookId=\" + metaData.bookId + \"&chapterUid=\" + highlight.chapterUid + \"&rangeStart=\" + rangeParts[0] + \"&rangeEnd=\" + rangeParts[1] %}\n{% if syncPopularHighlightsToggle and highlight.isPopular %}\n> 📌🔥 [{{ highlight.markText | trim }}](<{{ deeplink }}>)  \n> 🔥 {{ highlight.popularCount }} 人共读 ^{{ highlight.bookmarkId }}\n\n{% else %}\n> 📌 [{{ highlight.markText | trim }}](<{{ deeplink }}>)   ^{{ highlight.bookmarkId }}\n\n{% endif %}\n{% endfor %}\n{% endfor %}\n\n# 笔记汇总\n{% for chapter in chapterHighlights %}\n{% for highlight in chapter.highlights %}\n{% if highlight.reviewContent %}\n## {{ chapter.chapterTitle }} 的想法\n{{ highlight.reviewContent }}\n> 📌 {{ highlight.markText | trim }}\n\n{% endif %}\n{% endfor %}\n{% endfor %}\n\n{% if bookReview.bookReviews %}\n{% for bookReview in bookReview.bookReviews %}\n# 书评\n\n{{ bookReview.mdContent }}\n{{ bookReview.createTime }}\n{% endfor %}\n{% endif %}\n",
+      "trimBlocks": true,
+      "isBuiltIn": true,
+      "isReadOnly": true,
+      "source": "builtin"
+    },
+    {
+      "id": "builtin_official",
+      "name": "微信官方笔记主题",
+      "description": "详细的元数据信息，适合生成书籍笔记",
+      "template": "---\nisbn: {{ metaData.isbn }}\nlastReadDate: {{ metaData.lastReadDate }}\n---\n《{{ metaData.title }}》\n{{ metaData.author }}\n{{ metaData.noteCount }}个笔记\n\n{% if bookReview.bookReviews %}\n{% for bookReview in bookReview.bookReviews %}\n◆ 点评\n{{ bookReview.createTime }}\n{{ bookReview.mdContent }}\n{% endfor %}\n{% endif %}\n\n{% for chapter in chapterHighlights %}\n{% if chapter.level == 1 %}\n## ◆ {{ chapter.chapterTitle }}\n{% elif chapter.level == 2 %}\n### ◆ {{ chapter.chapterTitle }}\n{% elif chapter.level == 3 %}\n#### ◆ {{ chapter.chapterTitle }}\n{% endif %}\n{% for highlight in chapter.highlights %}\n{% set rangeParts = highlight.range | split(\"-\") %}\n{% set deeplink = \"weread://bestbookmark?bookId=\" + metaData.bookId + \"&chapterUid=\" + highlight.chapterUid + \"&rangeStart=\" + rangeParts[0] + \"&rangeEnd=\" + rangeParts[1] %}\n{% if highlight.reviewContent %}\n\n{{ highlight.createTime }} 发表想法\n{{ highlight.reviewContent }}\n\n{% if syncPopularHighlightsToggle and highlight.isPopular %}\n> [{{ highlight.markText | trim }}](<{{ deeplink }}>) ^{{ highlight.bookmarkId }}\n> 🔥 {{ highlight.popularCount }} 人共读\n{% else %}\n> [{{ highlight.markText | trim }}](<{{ deeplink }}>) ^{{ highlight.bookmarkId }}\n{% endif %}\n\n{% else %}\n\n{% if syncPopularHighlightsToggle and highlight.isPopular %}\n> [{{ highlight.markText | trim }}](<{{ deeplink }}>) ^{{ highlight.bookmarkId }}\n> 🔥 {{ highlight.popularCount }} 人共读\n{% else %}\n> [{{ highlight.markText | trim }}](<{{ deeplink }}>) ^{{ highlight.bookmarkId }}\n{% endif %}\n\n{% endif %}\n{% endfor %}\n{% endfor %}\n",
+      "trimBlocks": true,
+      "isBuiltIn": true,
+      "isReadOnly": true,
+      "source": "builtin"
+    }
+  ],
+  "activeThemeId": "builtin_merged",
+  "wereadApiKey": "wrk-0jys6fpTRPOvSTCD93H0GwAA",
+  "apiKeyValid": true,
+  "readingStatsLocation": "/",
+  "statsStartYear": 0,
+  "popularHighlightsCacheTtl": 7
+}
