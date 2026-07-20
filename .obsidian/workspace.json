@@ -6,7 +6,7 @@
       {
         "id": "5b4631d3e282ede0",
         "type": "tabs",
-        "dimension": 54.98575498575499,
+        "dimension": 45.04504504504504,
         "children": [
           {
             "id": "a89ffa39ba87a00a",
@@ -23,7 +23,7 @@
       {
         "id": "0b1d37edfea3b7d8",
         "type": "tabs",
-        "dimension": 45.01424501424501,
+        "dimension": 54.95495495495496,
         "children": [
           {
             "id": "c71c56522b9a3b72",
@@ -31,12 +31,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "总览.md",
+                "file": "Wiki/_index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "总览"
+              "title": "_index"
             }
           }
         ]
@@ -96,7 +96,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 534.5
+    "width": 348.5
   },
   "right": {
     "id": "3cc09816a674cf4c",
@@ -205,8 +205,10 @@
   },
   "active": "c71c56522b9a3b72",
   "lastOpenFiles": [
-    "AGENTS.md",
+    "Wiki/副业/_index.md",
+    "Wiki/副业/副业探索-AI情绪管理工具.md",
     "总览.md",
+    "AGENTS.md",
     "Raw/05-成长/04-读书笔记/梁永安：阅读、游历和爱情.md",
     "Raw/05-成长/04-读书笔记/基督山伯爵（全3册读客三个圈经典文库）.md",
     "Raw/05-成长/04-读书笔记/心：稻盛和夫的一生嘱托（独家首发）.md",
@@ -229,8 +231,6 @@
     "Raw/05-成长/04-读书笔记/你好，生命  写给年轻人的生命教育课.md",
     "Raw/05-成长/04-读书笔记/爱的多重奏.md",
     "Raw/05-成长/04-读书笔记/幸福的勇气：“自我启发之父”阿德勒的哲学课2.md",
-    "Raw/05-成长/04-读书笔记/亲密关系.md",
-    "Raw/05-成长/04-读书笔记/一行禅师大合集：一套写给普通人的佛学入门书.md",
     "Raw/07-图片",
     "Raw/07-assets",
     "Raw/06-健康/03-健康管理/05-甲状腺",
