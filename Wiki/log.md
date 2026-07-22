@@ -1,1 +1,2 @@
 ﻿- 2026-07-22 | 更新 | 副业探索-AI情绪管理工具 | 完成 MVP V1 开发（HTML/CSS/JS网页工具）
+- 2026-07-22 | 部署 | 副业探索-AI情绪管理工具 | GitHub Pages 部署完成：https://lynn008800.github.io/mood-station/
