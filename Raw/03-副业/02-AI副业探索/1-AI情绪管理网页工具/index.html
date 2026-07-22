@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>心情小站 - 你的情绪管理小工具</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app">
+  <!-- ========== 首页 ========== -->
+  <div id="page-home" class="page active">
+    <div class="home-content">
+      <div class="home-emoji">🧸</div>
+      <h1 class="home-title">今天你的心情怎么样？</h1>
+      <p class="home-subtitle">欢迎来到心情小站</p>
+      <p class="home-desc">每个人都会有不同心情——开心、难过、生气、紧张……<br>有这些感觉都很正常。<br>关键是：你知道自己现在是什么感觉吗？</p>
+      <p class="home-prompt">来，先做个小测试，看看你今天的心情是什么颜色的。</p>
+      <button class="btn btn-primary" onclick="goToQuestionnaire()">开始测试 →</button>
+      <div class="home-quick-links">
+        <button class="btn btn-outline" onclick="goToScenarios()">🎯 直接做情景练习</button>
+        <button class="btn btn-outline" onclick="goToDiary()">📔 写情绪日记</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== 问卷页 ========== -->
+  <div id="page-questionnaire" class="page">
+    <div class="page-header">
+      <button class="btn-back" onclick="goHome()">← 返回</button>
+      <span class="page-title">情绪小测试</span>
+    </div>
+    <div class="progress-bar">
+      <div class="progress-fill" id="progressFill"></div>
+    </div>
+    <div id="questionContainer" class="question-container"></div>
+  </div>
+
+  <!-- ========== 结果页 ========== -->
+  <div id="page-results" class="page">
+    <div class="page-header">
+      <button class="btn-back" onclick="goHome()">← 返回</button>
+      <span class="page-title">你的心情报告</span>
+    </div>
+    <div id="resultsContent" class="results-container"></div>
+  </div>
+
+  <!-- ========== 情景练习列表页 ========== -->
+  <div id="page-scenarios" class="page">
+    <div class="page-header">
+      <button class="btn-back" onclick="goHome()">← 返回</button>
+      <span class="page-title">情景练习</span>
+    </div>
+    <div class="scenarios-list" id="scenariosList"></div>
+  </div>
+
+  <!-- ========== 单个情景练习页 ========== -->
+  <div id="page-scenario-detail" class="page">
+    <div class="page-header">
+      <button class="btn-back" onclick="goToScenarios()">← 返回</button>
+      <span class="page-title" id="scenarioDetailTitle">情景练习</span>
+    </div>
+    <div id="scenarioDetailContent" class="scenario-detail"></div>
+  </div>
+
+  <!-- ========== 情绪日记页 ========== -->
+  <div id="page-diary" class="page">
+    <div class="page-header">
+      <button class="btn-back" onclick="goHome()">← 返回</button>
+      <span class="page-title">心情日记</span>
+    </div>
+    <div id="diaryContent" class="diary-container"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
