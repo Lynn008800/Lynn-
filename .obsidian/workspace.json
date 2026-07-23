@@ -31,12 +31,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wiki/副业/副业探索-AI情绪管理工具.md",
+                "file": "Wiki/健康/_index.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "副业探索-AI情绪管理工具"
+              "title": "_index"
             }
           }
         ]
@@ -205,6 +205,7 @@
   },
   "active": "c71c56522b9a3b72",
   "lastOpenFiles": [
+    "Wiki/副业/副业探索-AI情绪管理工具.md",
     "Wiki/log.md",
     "Raw/03-副业/02-AI副业探索/1-AI情绪管理网页工具/script.js",
     "Raw/03-副业/02-AI副业探索/1-AI情绪管理网页工具/style.css",
@@ -213,7 +214,6 @@
     "Raw/03-副业/02-AI副业探索/1-AI情绪管理网页工具",
     "Wiki/_index.md",
     "Wiki/副业/_index.md",
-    "Wiki/副业/副业探索-AI情绪管理工具.md",
     "总览.md",
     "AGENTS.md",
     "Raw/05-成长/04-读书笔记/梁永安：阅读、游历和爱情.md",
