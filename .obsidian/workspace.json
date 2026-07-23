@@ -12,10 +12,14 @@
             "id": "a89ffa39ba87a00a",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "关系图谱"
+              "type": "markdown",
+              "state": {
+                "file": "Wiki/健康/_index.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "_index"
             }
           }
         ]
@@ -203,8 +207,14 @@
       "obsidian-weread-plugin:打开微信读书书架": false
     }
   },
-  "active": "c71c56522b9a3b72",
+  "active": "a89ffa39ba87a00a",
   "lastOpenFiles": [
+    "Wiki/关于我/偏好规则.md",
+    "Wiki/关于我/目标与愿景.md",
+    "Wiki/关于我/健康概况.md",
+    "Wiki/_log.md",
+    "Wiki/_index.md",
+    "Wiki/健康/_index.md",
     "Wiki/副业/副业探索-AI情绪管理工具.md",
     "Wiki/log.md",
     "Raw/03-副业/02-AI副业探索/1-AI情绪管理网页工具/script.js",
@@ -212,7 +222,6 @@
     "Raw/03-副业/02-AI副业探索/1-AI情绪管理网页工具/index.html",
     "Raw/03-副业/02-AI副业探索/1-AI情绪管理网页工具/content-draft.md",
     "Raw/03-副业/02-AI副业探索/1-AI情绪管理网页工具",
-    "Wiki/_index.md",
     "Wiki/副业/_index.md",
     "总览.md",
     "AGENTS.md",
@@ -230,11 +239,6 @@
     "Raw/05-成长/04-读书笔记/与内在小孩和解.md",
     "Raw/05-成长/04-读书笔记/认知觉醒：开启自我改变的原动力.md",
     "Raw/05-成长/04-读书笔记/人生.md",
-    "Raw/05-成长/04-读书笔记/刀锋.md",
-    "Raw/05-成长/04-读书笔记/悉达多（果麦经典）.md",
-    "Raw/05-成长/04-读书笔记/也许你该找个人聊聊.md",
-    "Raw/05-成长/04-读书笔记/被讨厌的勇气：“自我启发之父”阿德勒的哲学课.md",
-    "Raw/05-成长/04-读书笔记/心理课怎么玩.md",
     "Raw/07-图片",
     "Raw/07-assets",
     "Raw/06-健康/03-健康管理/05-甲状腺",
