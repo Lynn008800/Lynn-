@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Wiki/关于我/偏好规则.md",
+                "file": "Wiki/关于我/健康概况.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "偏好规则"
+              "title": "健康概况"
             }
           }
         ]
@@ -187,12 +187,16 @@
   },
   "active": "c71c56522b9a3b72",
   "lastOpenFiles": [
+    "Wiki/关于我/个人档案.md",
+    "Wiki/副业/副业探索-AI情绪管理工具.md",
+    "Wiki/_index.md",
+    "Wiki/健康/_index.md",
+    "Wiki/内容创作/_index.md",
+    "Wiki/关于我/偏好规则.md",
     "Wiki/关于我/目标与愿景.md",
     "Wiki/关于我/健康概况.md",
     "Wiki/关于我/工作方式.md",
-    "Wiki/关于我/个人档案.md",
     "Wiki/工作/项目简录.md",
-    "Wiki/内容创作/_index.md",
     "Wiki/内容创作/灵感盒子.md",
     "Wiki/内容创作/定位探索.md",
     "Wiki/副业/_index.md",
@@ -210,17 +214,13 @@
     "AGENTS.md",
     "总览.md",
     "Wiki/健康/健康管理/PCOS.md",
-    "Wiki/关于我/偏好规则.md",
     "Wiki/log.md",
     "Raw/03-副业/02-AI副业探索/1-AI情绪管理网页工具/content-draft.md",
-    "Wiki/副业/副业探索-AI情绪管理工具.md",
     "Wiki/成长/_index.md",
     "Wiki/成长/读书笔记/被讨厌的勇气.md",
     "Wiki/成长/读书笔记/一行禅师大合集.md",
     "Wiki/成长/读书笔记/悉达多.md",
     "Wiki/成长/读书笔记/基督山伯爵.md",
-    "Wiki/成长/读书笔记/活出生命的意义.md",
-    "Wiki/成长/读书笔记/高效能人士的七个习惯.md",
     "Wiki/成长/读书笔记",
     "Wiki/健康/健康管理"
   ]
