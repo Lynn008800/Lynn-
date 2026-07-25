@@ -27,3 +27,10 @@
 ### 备注
 - 每篇读书笔记包含：标签、基本信息、核心观点摘录、Lynn 的个人评论/共鸣、双向链接
 - 部分书阅读进度较低（<10%），以框架和核心观点为主
+
+## [2026-07-25] restructure | Wiki 重构为 entities / concepts / sources
+- 迁移 28 本读书笔记到 entities/
+- 迁移 项目简录、PCOS 到 entities/
+- 迁移 副业探索-AI情绪管理工具 到 concepts/
+- 创建 entities/ concepts/ sources/ 框架 + _index.md
+- 删除旧领域文件夹（工作/副业/成长/健康/内容创作）— 需手动清理空文件夹
