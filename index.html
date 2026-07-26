@@ -1,0 +1,221 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>假如MBTI是道菜 · 你是哪道菜？</title>
+<style>
+  *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+  :root{--bg:#FFF8F0;--surface:#FFFFFF;--primary:#E8542C;--text:#3A2A1A;--text-light:#8A7A6A;--text-muted:#B8A898;--border:#F0E8DC;--radius:16px;--shadow:0 4px 24px rgba(0,0,0,0.06);--font:-apple-system,"PingFang SC","Microsoft YaHei","Helvetica Neue",sans-serif}
+  html,body{height:100%;font-family:var(--font);background:var(--bg);color:var(--text);line-height:1.6;-webkit-font-smoothing:antialiased}
+  body{display:flex;align-items:center;justify-content:center;padding:16px}
+  .container{width:100%;max-width:480px;min-height:560px;background:var(--surface);border-radius:var(--radius);box-shadow:var(--shadow);padding:32px 24px;position:relative;overflow:hidden}
+  .page{display:none}
+  .page.active{display:block}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+  @keyframes scaleIn{from{opacity:0;transform:scale(0.8)}to{opacity:1;transform:scale(1)}}
+  @keyframes bounce{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+  .landing{text-align:center;padding-top:20px;animation:fadeUp 0.5s ease-out}
+  .landing .hero-emoji{font-size:80px;display:block;margin-bottom:12px;animation:bounce 2.5s ease-in-out infinite}
+  .landing h1{font-size:28px;font-weight:800;line-height:1.35;margin-bottom:8px;letter-spacing:-0.5px}
+  .landing h1 .hl{color:var(--primary)}
+  .landing .sub{font-size:14px;color:var(--text-light);margin-bottom:28px}
+  .landing .intro-box{font-size:14px;color:var(--text-light);line-height:1.9;background:linear-gradient(135deg,#FFF8F0,#FFF0E6);border-radius:14px;padding:20px;margin-bottom:32px;text-align:left;border:1px solid #F0E0D0}
+  .landing .intro-box p+p{margin-top:6px}
+  .landing .intro-box p:last-child{margin-top:10px;font-weight:600;color:var(--primary)}
+  .landing .btn-start{display:block;width:100%;padding:16px;font-size:18px;font-weight:700;background:linear-gradient(135deg,var(--primary),#D03A1A);color:#fff;border:none;border-radius:14px;cursor:pointer;transition:transform 0.15s;box-shadow:0 4px 16px rgba(232,84,44,0.3);letter-spacing:1px}
+  .landing .btn-start:active{transform:scale(0.97)}
+  .landing .footer-note{margin-top:16px;font-size:12px;color:var(--text-muted)}
+  .quiz{animation:fadeUp 0.35s ease-out}
+  .quiz-header{display:flex;align-items:center;gap:12px;margin-bottom:28px}
+  .quiz-header .counter{font-size:13px;font-weight:600;color:var(--text-muted);white-space:nowrap;min-width:42px}
+  .quiz-header .progress-track{flex:1;height:6px;background:var(--border);border-radius:3px;overflow:hidden}
+  .quiz-header .progress-fill{height:100%;background:linear-gradient(90deg,var(--primary),#F5A623);border-radius:3px;transition:width 0.4s ease}
+  .quiz-question{font-size:19px;font-weight:700;line-height:1.5;margin-bottom:28px;color:var(--text)}
+  .quiz-options{display:flex;flex-direction:column;gap:12px}
+  .quiz-options button{width:100%;padding:18px 16px;font-size:15px;text-align:left;line-height:1.5;background:#FFFCF8;border:2px solid var(--border);border-radius:14px;cursor:pointer;transition:all 0.2s}
+  .quiz-options button:hover{border-color:var(--primary);background:#FFF4ED;transform:translateY(-1px)}
+  .quiz-options button .opt-label{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;font-size:13px;font-weight:700;color:var(--primary);background:#FFE8E0;border-radius:50%;margin-right:12px;flex-shrink:0}
+  .result{animation:fadeUp 0.5s ease-out}
+  .result-hero{text-align:center;padding:24px 0 16px;position:relative;border-radius:20px;margin-bottom:20px;overflow:hidden}
+  .result-hero .bg-pattern{position:absolute;inset:0;opacity:0.08;background:repeating-conic-gradient(var(--accent) 0% 25%,transparent 0% 50%) 0 0 / 40px 40px;pointer-events:none}
+  .result-hero .emoji-ring{position:relative;display:inline-flex;align-items:center;justify-content:center;width:140px;height:140px;border-radius:50%;background:linear-gradient(135deg,var(--accent-light,#FFF0E6),var(--surface));box-shadow:0 8px 40px rgba(0,0,0,0.08),inset 0 -2px 10px rgba(0,0,0,0.04);margin-bottom:10px;animation:scaleIn 0.6s ease-out}
+  .result-hero .emoji-ring .food-emoji{font-size:72px;line-height:1;filter:drop-shadow(0 4px 8px rgba(0,0,0,0.1))}
+  .result-hero .food-name{font-size:32px;font-weight:800;letter-spacing:2px;position:relative;display:inline-block}
+  .result-hero .food-name::after{content:"";display:block;width:60%;height:3px;background:linear-gradient(90deg,transparent,var(--accent),transparent);margin:6px auto 0;border-radius:2px}
+  .result-hero .food-tag{display:inline-block;margin-top:8px;padding:4px 16px;background:var(--accent-bg,#FFF4ED);color:var(--accent,#E8542C);font-size:12px;font-weight:600;border-radius:20px}
+  .result-desc{background:#FFFCF8;border-radius:16px;padding:20px;border:1px solid var(--border);margin-bottom:20px}
+  .result-desc p{font-size:15px;line-height:1.85;color:var(--text)}
+  .result-desc p+p{margin-top:14px}
+  .result-share-box{background:linear-gradient(135deg,var(--accent-bg,#FFF8F0),#FFF0E6);border-radius:14px;padding:16px;margin-bottom:20px;border:1px solid var(--border)}
+  .result-share-box .share-label{font-size:12px;color:var(--text-muted);margin-bottom:8px}
+  .result-share-box .share-text{font-size:14px;line-height:1.7;color:var(--text);padding:14px;background:#fff;border-radius:10px;border:1px dashed var(--accent,#F5A623)}
+  .result-actions{display:flex;flex-direction:column;gap:10px}
+  .result-actions button{width:100%;padding:15px;font-size:15px;font-weight:600;border:none;border-radius:12px;cursor:pointer;transition:transform 0.12s;letter-spacing:0.5px}
+  .result-actions button:active{transform:scale(0.97)}
+  .result-actions .btn-copy{background:linear-gradient(135deg,var(--primary),#D03A1A);color:#fff;box-shadow:0 3px 12px rgba(232,84,44,0.25)}
+  .result-actions .btn-share{background:var(--accent,#F5A623);color:#fff;box-shadow:0 3px 12px rgba(245,166,35,0.25)}
+  .result-actions .btn-retake{background:var(--border);color:var(--text)}
+  .toast{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:rgba(0,0,0,0.78);color:#fff;padding:14px 28px;border-radius:10px;font-size:14px;z-index:999;animation:fadeUp 0.3s ease-out;pointer-events:none}
+  @media (max-width:420px){.container{padding:24px 16px}.landing h1{font-size:24px}.result-hero .emoji-ring{width:120px;height:120px}.result-hero .emoji-ring .food-emoji{font-size:60px}.result-hero .food-name{font-size:26px}}
+</style>
+</head>
+<body>
+<div class="container" id="app">
+
+<div class="page active" id="page-landing">
+  <div class="landing">
+    <span class="hero-emoji">🍜</span>
+    <h1>假如<span class="hl">MBTI</span>是道菜<br>你是哪道菜？</h1>
+    <p class="sub">16种灵魂料理 · 测测你的本命是哪一道</p>
+    <div class="intro-box">
+      <p>你有没有想过——如果MBTI那些字母换成吃的会是什么？</p>
+      <p>不用做60道题，不用看那些看不懂的名词。</p>
+      <p>回答8个生活场景，看看你的灵魂是哪种味道。</p>
+      <p>🍳 只要2分钟</p>
+    </div>
+    <button class="btn-start" onclick="startQuiz()">开始鉴定 →</button>
+    <p class="footer-note">⚠️ 纯属娱乐 · 仅供干饭参考</p>
+  </div>
+</div>
+
+<div class="page" id="page-quiz">
+  <div class="quiz">
+    <div class="quiz-header">
+      <span class="counter" id="qCounter">1/8</span>
+      <div class="progress-track"><div class="progress-fill" id="qProgress" style="width:12.5%"></div></div>
+    </div>
+    <div class="quiz-question" id="qText"></div>
+    <div class="quiz-options" id="qOptions"></div>
+  </div>
+</div>
+
+<div class="page" id="page-result">
+  <div class="result">
+    <div class="result-hero" id="resultHero">
+      <div class="bg-pattern"></div>
+      <div class="emoji-ring"><span class="food-emoji" id="rEmoji"></span></div>
+      <div class="food-name" id="rName"></div>
+      <div class="food-tag" id="rTag">✨ 灵魂料理鉴定</div>
+    </div>
+    <div class="result-desc" id="rDesc"></div>
+    <div class="result-share-box">
+      <div class="share-label">📢 发朋友圈 / B站动态</div>
+      <div class="share-text" id="rShare"></div>
+    </div>
+    <div class="result-actions">
+      <button class="btn-copy" onclick="copyResult()">📋 复制结果</button>
+      <button class="btn-share" onclick="shareResult()">🔗 让朋友也测测</button>
+      <button class="btn-retake" onclick="resetQuiz()">🔄 再来一次</button>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<script>
+function _(id){return document.getElementById(id)}
+
+function showPage(id){
+  var pages=document.querySelectorAll(".page");
+  for(var i=0;i<pages.length;i++){pages[i].classList.remove("active")}
+  _(id).classList.add("active")
+}
+
+var FOODS={};
+var qs=[
+  ["朋友跟你吐槽同一件事第三遍了，你会？","继续耐心听，朋友不就是用来听的嘛","Q","“这个问题我跟你说过了吧！听我的，现在就去解决”","H"],
+  ["遇到不公平的事，你的第一反应是？","心里不舒服，但先忍忍，看情况再说","Q","不能忍，当场就要说清楚","H"],
+  ["出去旅游你更接近哪种状态？","提前做攻略精确到每小时，连餐厅都订好了","M","订个机票酒店就够了，剩下的到了再说","B"],
+  ["看到一件心动但不便宜的东西，你会？","先收藏，查测评，等冷静期过了再决定","M","喜欢就买，犹豫就会败北","B"],
+  ["连续社交三天后，你的真实状态是？","电量耗尽，需要一个人待一天回血","D","还好啊，明天继续约","Y"],
+  ["一个人的周末，你更可能？","享受得要死——这就是我最想要的周末","D","有点无聊，想找人出来玩","Y"],
+  ["去一家去了无数次的店，你通常会？","点老几样，稳定的美味才是王道","J","试没吃过的，万一发现新大陆呢","L"],
+  ["你的歌单/外卖收藏夹更像？","就那么几首/几家，反复听反复吃","J","一直在更新，新的来了旧的就走","L"]
+];
+
+var qIdx=0;
+var sc={Q:0,H:0,M:0,B:0,D:0,Y:0,J:0,L:0};
+
+function startQuiz(){
+  qIdx=0;
+  sc={Q:0,H:0,M:0,B:0,D:0,Y:0,J:0,L:0};
+  showPage("page-quiz");
+  renderQ()
+}
+
+function renderQ(){
+  var q=qs[qIdx];
+  _("qText").textContent=q[0];
+  _("qCounter").textContent=(qIdx+1)+"/8";
+  _("qProgress").style.width=((qIdx+1)/8*100)+"%";
+  _("qOptions").innerHTML=
+    '<button onclick="ans('+qIdx+',0)"><span class="opt-label">A</span>'+q[1]+'</button>'+
+    '<button onclick="ans('+qIdx+',1)"><span class="opt-label">B</span>'+q[3]+'</button>'
+}
+
+function ans(i,opt){
+  sc[qs[i][2+opt*2]]++;
+  qIdx++;
+  if(qIdx>=8){showResult()}else{renderQ()}
+}
+
+function showResult(){
+  function pick(a,b){return sc[a]>sc[b]?a:(sc[a]<sc[b]?b:(Math.random()<0.5?a:b))}
+  var key=pick("Q","H")+pick("M","B")+pick("D","Y")+pick("J","L");
+  var food=FOODS[key];
+  _("rEmoji").textContent=food[0];
+  _("rName").textContent=food[1];
+  var desc=food[2].split("<br>"),dh="";
+  for(var i=0;i<desc.length;i++){dh+="<p>"+desc[i]+"</p>"}
+  _("rDesc").innerHTML=dh;
+  _("rShare").textContent=food[3];
+  var hero=document.getElementById("resultHero");
+  hero.style.setProperty("--accent",food[4]);
+  hero.style.setProperty("--accent-light",food[4]+"1A");
+  hero.style.setProperty("--accent-bg",food[4]+"1A");
+  showPage("page-result")
+}
+
+function copyToClip(t){
+  if(navigator.clipboard){navigator.clipboard.writeText(t).then(function(){toast("✅ 已复制！")});return}
+  var ta=document.createElement("textarea");ta.value=t;ta.style.position="fixed";ta.style.left="-999px";
+  document.body.appendChild(ta);ta.select();
+  try{document.execCommand("copy")}catch(e){}
+  document.body.removeChild(ta);toast("✅ 已复制！")
+}
+function copyResult(){
+  var name=_("rName").textContent,share=_("rShare").textContent,url=location.href;
+  copyToClip("【假如MBTI是道菜·我是"+name+"】\n"+share+"\n\n来测测你是哪道菜 👉 "+url)
+}
+function shareResult(){
+  copyToClip(location.href)
+}
+function resetQuiz(){startQuiz()}
+function toast(m){
+  var el=document.createElement("div");el.className="toast";el.textContent=m;
+  document.body.appendChild(el);setTimeout(function(){el.remove()},1800)
+}
+
+FOODS={
+  "QMDJ":["🍢","关东煮","你是深夜便利店那盏永远亮着的灯——温暖、安静、不张扬。<br>你不太喜欢成为人群的焦点，但你总能在别人需要的时候给出恰到好处的陪伴。你的温柔不是软弱，而是一种选择。<br>你对自己认定的事情很有耐心，不急不躁，像关东煮在汤里慢慢入味。你不喜欢频繁的改变，熟悉的东西让你安心。<br>很多人第一眼觉得你平平无奇，但真正了解你的人知道——你才是最让人舒服的那种存在。","我是关东煮人格🍢 温柔慢热说的就是我本人","#D4895A"],
+  "QMDL":["🍰","提拉米苏","看起来简简单单，实则层层叠叠——你是那种第一印象和深交后完全不同的人。<br>你喜欢在自己的节奏里探索世界，看起来安安静静，心里其实装满了奇奇怪怪的想法。你不喜欢被人看透，因为你知道自己有很多面。<br>你对新鲜事物充满好奇，但不会为了合群而改变自己。你有自己的一套审美和品味，喜欢的就深入研究，不喜欢的就算全世界都说好你也懒得看一眼。<br>你这种人，需要一个懂你的人慢慢挖，越挖越有味道。","破防了，提拉米苏人格🍰 表面精致内心戏很多","#A0522D"],
+  "QMYJ":["🥘","寿喜烧","甜甜的，暖暖的——你有一种让身边的人不自觉放松下来的气场。<br>你很在意和在乎的人一起度过的时光。对你来说，重要的不是吃什么，而是和谁一起吃。你愿意为在乎的人花时间花心思，是朋友圈里那种“有你在就很安心”的存在。<br>你不喜欢冲突和争吵，遇到矛盾更倾向于退一步。但这不代表你没有原则——在你心里，关系比胜负重要。<br>你是那种老朋友一提起就会说“TA啊，人特别好”的类型。","寿喜烧人格🥘 对在乎的人恨不得把最好的都给你","#D4735E"],
+  "QMYL":["🦐","冬阴功","看起来清清淡淡，喝一口才知道有多带劲——你就是这种让人惊喜的存在。<br>你不喜欢第一眼就交底，而是让人慢慢发现你的有趣。人群中你不算最显眼，但你总能在关键时刻冒出一句让人记住的话。<br>你既有耐心倾听别人，又有自己的鲜明态度。你不轻易发火，但该站出来的时刻从不退缩。你的包容不是软弱，是你主动选择的理解。<br>你是那种“可以跟很多人聊得来，但真正走进内心的只有一小撮”的人。","冬阴功人格🦐 都说我好说话？那是你没踩到我底线","#D4A017"],
+  "QBDJ":["🍛","咖喱饭","一个人也能把日子过好——你是那种让人羡慕的独立选手。<br>你温柔但不黏人，体贴但有边界。你知道怎么照顾自己，也知道怎么拒绝别人。你不害怕独处，甚至很享受——因为独处的时候你才能好好充电。<br>你做事情干脆利落，不拖泥带水。想好的事就会去做，不会在纠结上浪费时间。你在工作和生活之间有一条清晰的线，不喜欢被人打乱节奏。<br>喜欢你的人会说你是“外柔内刚”的典范——看着温柔，其实比谁都坚定。","咖喱饭人格🍛 治愈系天花板，但别碰我的边界","#C2922A"],
+  "QBDL":["🥭","芒果糯米饭","甜甜蜜蜜，一个人也能把日子过成旅行——你就是那种自带阳光感的人。<br>你很懂得如何让自己开心，也知道怎么取悦自己。你喜欢尝试新东西，但你不随大流——你是那种“我觉得有意思才去试”而不是“大家都在试所以我也要”的人。<br>你独立但不孤僻，温柔但有主见。你不会为了迎合别人而委屈自己，也不会因为别人的评价而打乱自己的节奏。<br>跟你相处很轻松——你不粘人，不索取，但你给出的关心又很真诚。","芒果糯米饭人格🥭 我一个人也可以过得很好谢谢","#F5A623"],
+  "QBYJ":["🥥","椰子鸡","清甜不腻，和谁都能处得来——你就是朋友圈里那个“万金油”般的存在。<br>你有一种让不同圈子的人都能跟你玩到一起的魔力。你不挑人，不挑场合，什么局都能接住。你的社交不是刻意为之，而是发自内心地觉得“跟人聊天挺有意思的”。<br>你做事利索，不磨叽。约你出来玩你不会犹豫半天，说走就走。你的朋友都知道，找你不用提前三天约。<br>你是那种“新朋友会喜欢、老朋友会依赖”的类型——舒服，又不费力。","椰子鸡人格🥥 朋友圈粘合剂，说的就是我","#6BAA6B"],
+  "QBYL":["🍲","部队锅","什么都能往锅里加，你的社交圈就是这么包容——你是那种什么话题都能接住的神人。<br>你跟谁都能聊两句，从八卦到科技到人生哲学，你都有自己的看法。你不排斥新鲜事物，甚至主动去接触不同的圈子和文化。<br>你做事节奏快，想到什么就去做，执行力很强。你跟朋友相处也很大方，不斤斤计较，但也很有分寸——不会让人觉得越界。<br>跟你做朋友很赚——你有趣、包容、什么都懂一点，还不会judge别人。","部队锅人格🍲 跟我做朋友很赚，什么话题我都接得住","#D45A4A"],
+  "HMDJ":["🍜","螺蛳粉","爱者爱死，恨者恨死——你就是这种“我行我素”的代言人。<br>你从不为了讨好别人而改变自己。你有非常鲜明的品味和偏好，而且你不怕被人议论。你的朋友圈可能不大，但留下来的都是真正懂你的人。<br>你看起来很硬的壳子底下，其实有一颗非常长情的心。你对自己认可的人或事极度忠诚，一旦认定了就很难改变。<br>你不喜欢随大流，不追网红店不凑热闹。你有自己的节奏和原则，外界的声音很难动摇你。","螺蛳粉人格🍜 我不在乎所有人喜不喜欢我","#8B2500"],
+  "HMDL":["🌶️","冒菜","一个人的狂欢，想加什么加什么——你是那种“一个人也活得精彩”的独行侠。<br>你不怕一个人吃饭、一个人看电影、一个人旅行。你甚至很享受——因为没有人的节奏比你自己的节奏更舒服。<br>你内心其实很有料，不是那种表面热闹内心空虚的人。你对自己喜欢的事物愿意花时间去钻研，而且很有自己的想法。<br>你的朋友不多，但个个都是精品。你不喜欢无效社交，宁可不说话也不想尬聊。但只要聊到你感兴趣的话题，你可以说三天三夜。","冒菜人格🌶️ 一个人也能吃出满汉全席的感觉","#D42A20"],
+  "HMYJ":["🫕","火锅","没有一顿火锅解决不了的事——你就是那种豪爽又靠谱的人。<br>你是朋友圈里的核心人物。不管什么局，有你在就不会冷场。你热情、大方、讲义气，朋友有难你第一个站出来。<br>你虽然喜欢热闹，但你不浮躁。你做事情有自己的节奏和章法，不是那种毛毛躁躁的人。你知道什么时候该闹、什么时候该认真。<br>你的包容力很强，可以跟各种性格的人相处。但你也很有自己的脾气——不惹你的时候什么都好说，踩到底线你看不到明天的太阳。","火锅人格🫕 朋友局没我不行，我就是那个攒局的人","#C62828"],
+  "HMYL":["🥩","烤肉","我负责烤你负责吃——跟着我不会让你饿着。<br>你是那种“会照顾人但又不啰嗦”的存在。你有一种天然的号召力，不是靠命令，而是靠那股“靠谱”的气场。大家都愿意把决定权交给你。<br>你喜欢尝试新鲜的东西，但你也很在意和你一起的人的感受。你不是那种只顾自己爽的人——你会把每个人都照顾到。<br>你有自己的品味和坚持，但你不会强加给别人。你享受在人群中散发能量的感觉，但你也不是离了人就不行。","烤肉人格🥩 跟我在一块你只管张嘴，剩下的交给我","#795548"],
+  "HBDJ":["🥘","麻辣烫","自己选的菜自己吃完——你的人生你做主，干脆利落不磨叽。<br>你是一个非常高效的人。做决定快、行动快、翻篇也快。你不喜欢浪费时间在纠结和犹豫上。对你来说“先试试再说”比“万一失败了怎么办”更符合你的人生态度。<br>你独立自主，不喜欢被人管着。你有自己的一套做事方式，而且通常很靠谱。你不需要别人来告诉你该怎么做。<br>你看起来好像很急很冲，但其实你内心很有数。你不是冲动，你是想清楚了就马上去做。","麻辣烫人格🥘 干脆利落不磨叽，不喜欢等","#BF360C"],
+  "HBDL":["🍗","炸鸡","快乐不需要理由——如果需要一个，那就是炸鸡。你是那种快乐至上的乐天派。<br>你的人生信条很简单：开心就好。你不太喜欢把简单的事情搞复杂，也不喜欢过度思考。你相信直觉，想到就去做。<br>你看起来很随性，其实你很有自己的判断力。你不是没有烦恼，而是你选择用轻松的方式去面对。你的快乐是一种能力，不是没心没肺。<br>跟你在一起的人都会被你那股“没什么大不了”的气场感染——你是那种自带快乐因子的人。","炸鸡人格🍗 快乐就完事了，想那么多干嘛","#E8A020"],
+  "HBYJ":["🐟","酸菜鱼","一上桌就是主角——没有人能拒绝一场酸爽开场。你就是那种自带光环的人。<br>你在人群中不需要刻意表现，就能成为焦点。你有自己的风格和态度，而且你不怕被人注意到。你享受被关注的感觉，也配得上这种关注。<br>你做事情雷厉风行，不拖泥带水。你有一种“我说了算”的气场，但不是让人不舒服的那种——你会带着大家一起往前走。<br>你看起来好像很强硬，其实你非常讲义气。对自己人，你掏心掏肺。","酸菜鱼人格🐟 别惹我，我酸起来自己都怕😂","#43A047"],
+  "HBYL":["🦞","小龙虾","放下手机，用手吃饭——有我在的局就不会冷场。你是当之无愧的社交之王。<br>你是那种自带气氛组属性的人。只要有你在，再无聊的局也能热起来。你不怕生，自来熟，而且你是真心喜欢跟人打交道的。<br>你热爱一切新鲜有趣的东西，而且是第一批去尝试的人。你讨厌无聊、讨厌重复、讨厌一成不变。你的生活信条是“活着就要折腾”。<br>你最大的魅力是你不在乎别人怎么看你——做自己，而且做得很开心。这种松弛感让所有人都想靠近你。","小龙虾人格🦞 社交天花板，有我在的局不会冷场","#E04040"]
+};
+</script>
+</body>
+</html>
+
